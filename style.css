@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 25px;
+  font-family: sans-serif;
+}
+.firstButton,
+.secondButton,
+.thirdButton,
+.fourthButton {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+}
+.accorionButton {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px;
+  border: 0;
+  background-color: lightgrey;
+  color: rgba(0, 0, 0, 0.8);
+}
+.accorionButton:hover {
+  background-color: lightseagreen;
+}
+.active {
+  background-color: lightseagreen;
+}
+.accorionButton::after {
+  content: "\00276F";
+  float: right;
+  transform: rotate(90deg);
+  margin-right: 15px;
+  color: grey;
+}
+.active::after {
+  content: "\00276F";
+  transform: rotate(270deg);
+  transition: 1s;
+}
+.panel {
+  background-color: lightgray;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 25px 50px;
+  list-style-type: disc;
+}
+li {
+  font-size: 15px;
+  padding-top: 5px;
+}
+@media only screen and (max-width: 830px) {
+  li {
+    font-size: 12px;
+  }
+  .accorionButton {
+    font-size: 15px;
+  }
+}
